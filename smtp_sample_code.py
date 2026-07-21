@@ -98,6 +98,5 @@ with smtplib.SMTP("smtp.gmail.com") as connection:
     connection.sendmail(
         from_addr=my_email,
         to_addrs=receiver_email,
-        # msg_container.as_string() converts our complex MIME container into the raw text protocol SMTP expects
-        msg=msg_container.as_string()
+        msg=msg_container.as_string()  # converts our complex MIME container into the raw text protocol SMTP expects
     )
